@@ -89,7 +89,7 @@ pipeline {
                     echo "Deploying to staging. Site ID: $NETLIFY_SITE_ID"
 
                     node_modules/.bin/netlify status
-                    node_modules/.bin/netlify deploy --dir=build 
+                    node_modules/.bin/netlify deploy --dir=build --json > deply-output.json
                 '''    
             }
         }
