@@ -59,14 +59,14 @@ pipeline {
                 stage('Local E2E') {
                     agent {
                         docker {
-                            image 'mcr.microsoft.com/playwright:v1.49.1-noble'
+                            image 'my-playwright'
                             reuseNode true
                         }
                     }
                     steps {
                         sh '''
                             npm install serve
-                            node_modules/.bin/serve -s build &
+                            serve -s build &
                             sleep 15
                             npx playwright test --reporter=html
                         '''
