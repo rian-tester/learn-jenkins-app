@@ -111,16 +111,6 @@ pipeline {
         }
 
 
-        stage ('Approval') {
-            steps {
-                timeout(time: 15, unit: 'MINUTES') {
-                    input message: '', ok: 'Yes, all looking good'
-                }
-                
-            }
-        }
-
-
         stage('Prod Deploy and E2E') {
             agent {
                 docker {
