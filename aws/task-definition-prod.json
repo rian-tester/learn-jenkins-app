@@ -4,7 +4,7 @@
     "containerDefinitions": [
         {
             "name": "learnjenkinsapp",
-            "image": "719149218961.dkr.ecr.us-east-1.amazonaws.com/learnjenkinsapp:1.0.18",
+            "image": "719149218961.dkr.ecr.us-east-1.amazonaws.com/learnjenkinsapp:#APP_VERSION#",
             "cpu": 0,
             "portMappings": [
                 {
