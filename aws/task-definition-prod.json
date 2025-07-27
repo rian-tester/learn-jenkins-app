@@ -1,9 +1,10 @@
 {
     "family": "LearnJenkinsApp-TaskDefinition-Prod",
+    "executionRoleArn": "arn:aws:iam::719149218961:role/ecsTaskExecutionRole",
     "containerDefinitions": [
         {
             "name": "learnjenkinsapp",
-            "image": "nginx:1.27-alpine",
+            "image": "719149218961.dkr.ecr.us-east-1.amazonaws.com/learnjenkinsapp:1.0.18",
             "cpu": 0,
             "portMappings": [
                 {
